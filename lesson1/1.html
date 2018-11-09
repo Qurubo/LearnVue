@@ -9,6 +9,20 @@
     <title>Learn Vue JS</title>
 </head>
 <body>
-    
+    <div class="wraper">
+        <div class="sample">
+            <input type="text">
+            <hr>
+            <h2>Hello, {{message}}</h2> 
+        </div>
+    </div>
+    <script>
+        let sample = new Vue({
+            el: ".sample",
+            data:{
+                message: "World"
+            }
+        });
+    </script>
 </body>
 </html>
