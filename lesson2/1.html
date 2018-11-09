@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <title>Learn Vue JS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sample">
+            <button class="btn btn-success" v-on:click="numbers.push(Math.random()*10)">Button</button>
+            <hr>
+            <h2 v-show="show">Hello, World!</h2>
+            <hr>
+            <ul class="list-group">
+                <li class="list-group-item" v-for="number in numbers">{{number}}</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let sample = new Vue({
+            el: ".sample",
+            data:{
+                show: false,
+                numbers: []
+            },
+            methods:{
+            }
+        });
+    </script>
+</body>
+</html>
