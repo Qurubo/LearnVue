@@ -9,6 +9,7 @@
         <Progress v-bind:val="numbers.length" v-bind:max="maxNumbers"></Progress>
         <hr>
         <button class="btn btn-success mb-2" v-on:click="addNumber" v-bind:disabled="done">Add number</button>
+        <button class="btn btn-dark mb-2" v-on:click="clean" v-bind:disabled="!done">Clean</button>
         <ul class="list-group">
             <li class="list-group-item" v-for="number in numbers" :key="number.id">{{number}}</li>
         </ul>
@@ -34,6 +35,9 @@ export default {
         let number = Math.floor(Math.random() * 11) - 5;
         this.numbers.push(number);
       }
+    },
+    clean(){
+      this.numbers = [];
     }
   },
   computed: {
