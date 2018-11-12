@@ -1,15 +1,15 @@
 <template>
 <div class="container">
     <div class="sample">
-        <button class="btn btn-success mt-2" v-on:click="show = !show">{{btnText}}</button>
+        <button class="btn btn-success mt-2 btn-lg" v-on:click="show = !show">{{btnText}}</button>
         <hr>
         <Progress v-bind:val="sum" v-bind:max="maxNumbers * 5"></Progress>
         <h2 v-show="show">Your profit is {{sum}}</h2>
         <hr>
         <Progress v-bind:val="numbers.length" v-bind:max="maxNumbers"></Progress>
         <hr>
-        <button class="btn btn-success mb-2" v-on:click="addNumber" v-bind:disabled="done">Add number</button>
-        <button class="btn btn-dark mb-2" v-on:click="clean" v-bind:disabled="!done">Clean</button>
+        <button class="btn btn-success mb-2 btn-lg" v-on:click="addNumber" v-bind:disabled="done">Add number</button>
+        <button class="btn btn-dark mb-2 btn-lg" v-on:click="clean" v-bind:disabled="!done">Clean</button>
         <ul class="list-group">
             <li class="list-group-item" v-for="number in numbers" :key="number.id">{{number}}</li>
         </ul>
